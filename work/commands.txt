@@ -1,0 +1,15 @@
+To compile:
+riscv32-unknown-elf-gcc -g -ffreestanding -O0 -Wl,--gc-sections -nostartfiles -nostdlib -nodefaultlibs -Wl,-T,riscv32-virt.ld crt0.s test.c
+
+Look at assembly:
+~/usys/riscv/riscv32-unknown-elf.gcc-12.1.0/bin/riscv32-unknown-elf-objdump -d a.out
+
+Save assembly to file
+~/usys/riscv/riscv32-unknown-elf.gcc-12.1.0/bin/riscv32-unknown-elf-objdump -d a.out > dump.txt
+
+QEMU start
+qemu-system-riscv32 -machine virt -m 128M -gdb tcp::1234 -S -kernel a.out
+
+gdb
+riscv32-unknown-elf-gdb --tui a.out
+target remote :1234
