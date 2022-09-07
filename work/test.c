@@ -12,5 +12,10 @@ int main() {
         x = strlen_simple(test_string);
     }
     //printf("%d\n", x);
+
+    int c = 0;
+    while(1 == 1) {
+        c++;
+    }
     return 0;
 }

@@ -4,7 +4,8 @@ OUTPUT_ARCH(riscv)
 MEMORY
 {
    /* qemu-system-risc32 virt machine */
-   RAM (rwx)  : ORIGIN = 0x80000000, LENGTH = 256K 
+   ROM (rx)  : ORIGIN = 0x80000000, LENGTH = 256K
+   RAM (rw)  : ORIGIN = 0x90000000, LENGTH = 256K
 }
 ENTRY(_start)
 SEARCH_DIR("/opt/riscv/riscv32-unknown-elf/lib");
