@@ -1,5 +1,11 @@
 To compile:
 riscv32-unknown-elf-gcc -g -ffreestanding -O0 -Wl,--gc-sections -nostartfiles -nostdlib -nodefaultlibs -Wl,-T,riscv32-virt.ld crt0.s test.c
+-ffreestanding tells the compiler that the standard library may not exist, and therefore not to make assumptions that it will be there.
+
+-Wl is a comma-separated list of flags to pass on to the linker (ld). --gc-sections stands for “garbage collect sections”, and tells ld to remove unused sections post-link.
+-nostartfiles, -nostdlib, and -nodefaultlibs respectively tell the linker not to link in any standard system startup files (such as the default crt0), any standard system stdlib implementation, or any standard system default linkable libraries
+
+-T allows you to specify the path to your linker script
 
 Look at assembly:
 ~/usys/riscv/riscv32-unknown-elf.gcc-12.1.0/bin/riscv32-unknown-elf-objdump -d a.out

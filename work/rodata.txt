@@ -1,4 +1,0 @@
-
-Hex dump of section '.rodata':
-  0x800000b4 68656c6c 6f00                       hello.
-

@@ -39,7 +39,7 @@ if __name__ == "__main__":
     switchedData = [switchEndian(d) for d in data]
 
     print('Code:')
-    writeLines(switchedData, codeout)
+    writeLines(data, codeout)
     print()
-    print('Data (same, but correct byte ordering)')
+    #print('Data (same, but correct byte ordering)')
     writeLines(data, dataout)
