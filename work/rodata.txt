@@ -1,0 +1,6 @@
+
+Hex dump of section '.rodata':
+  0x800001bc 6c6f6e67 20737472 696e6720 77697468 long string with
+  0x800001cc 206c6f74 73206f66 206c6574 74657273  lots of letters
+  0x800001dc 00                                  .
+

@@ -1,7 +1,8 @@
 .global main
 .text
 main:
-li x3, 0x2004
+mv x3, sp
+addi x3, x3, -16
 
 negative_value:
 li x1, 0xdeadbeef

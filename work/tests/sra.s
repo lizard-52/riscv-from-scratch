@@ -228,9 +228,13 @@
   bne x0, gp, pass
  fail: li a0, 0
  li a7, 93
+ li zero, 0
+ li zero, 0
  ecall
 
  pass: li a0, 42
  li a7, 93
+ li zero, 0
+ li zero, 0
  ecall
 

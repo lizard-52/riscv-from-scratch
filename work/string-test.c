@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int strlen_simple(const char *str) {
     int i;
@@ -7,16 +8,20 @@ int strlen_simple(const char *str) {
 }
 int main() {
     const char * test_string = "long string with lots of letters";
-    int x = 1;
-    x = strlen_simple(test_string);
+    int x = strlen_simple(test_string);
+    int y = strlen(test_string);
 
-    x = x * x;
-    char buffer[50];
-    sprintf(buffer, "%d\n");
-
-    for (int i = 0; i < strlen_simple(buffer); i++) { 
-        uart_put_char(buffer[i]);
+    if (x == y) {
+        exit_ok();
+    } else {
+        exit_fail();
     }
+    //char buffer[50];
+    //sprintf(buffer, "%d\n");
+
+    //for (int i = 0; i < strlen_simple(buffer); i++) { 
+    //    uart_put_char(buffer[i]);
+    //}
 
     int c = 0;
     while(1 == 1) {

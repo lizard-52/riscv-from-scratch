@@ -1,10 +1,16 @@
 .global main
 main:
 
-li t0, -2
-sb t0, -1(sp)
-lbu t1, -1(sp)
-li t2, 254
+li t0, 1
+sw t0, -4(sp)
+lbu t1, -4(sp)
+li t2, 1
+
+sb t0, -3(sp)
+li t0, 2
+sb t0, -2(sp)
+lw t3, -4(sp)
+
 beq t1, t2, success
 
 failure:	

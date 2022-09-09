@@ -40,6 +40,3 @@ if __name__ == "__main__":
 
     print('Code:')
     writeLines(data, codeout)
-    print()
-    #print('Data (same, but correct byte ordering)')
-    writeLines(data, dataout)
